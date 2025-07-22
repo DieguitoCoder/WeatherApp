@@ -4,6 +4,13 @@ const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 const APIKey = '9410a63560d614812234993ad894e190';
+const searchInput = document.querySelector('.search-box input');
+
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        search.click(); // simula hacer clic en el botón
+    }
+});
 
 search.addEventListener('click', () => {
     const city = document.querySelector('.search-box input').value;
