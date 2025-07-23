@@ -1,10 +1,16 @@
-const container = document.querySelector(".container");
-const search = document.querySelector(".search-box button");
-const searchInput = document.querySelector(".search-box input");
-const weatherBox = document.querySelector(".weather-box");
-const weatherDetails = document.querySelector(".weather-details");
-const error404 = document.querySelector(".not-found");
-const APIKey = "9410a63560d614812234993ad894e190";
+const container = document.querySelector('.container');
+const search = document.querySelector('.search-box button');
+const weatherBox = document.querySelector('.weather-box');
+const weatherDetails = document.querySelector('.weather-details');
+const error404 = document.querySelector('.not-found');
+const APIKey = '9410a63560d614812234993ad894e190';
+const searchInput = document.querySelector('.search-box input');
+
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        search.click(); // simula hacer clic en el botón
+    }
+});
 
 // --- util ui ---
 function setLoading(isLoading) {
