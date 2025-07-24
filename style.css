@@ -1,18 +1,46 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #06283D;
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 1s ease-in-out;
+  /* background: #06283D; <- QUITADO para permitir el gradiente dinámico */
 }
+
+/* FONDOS SEGÚN EL CLIMA */
+.clear-bg {
+  background: linear-gradient(to top right, #f7971e, #ffd200); /* Amarillo intenso y naranja */
+}
+
+.clouds-bg {
+  background: linear-gradient(to top right, #bdc3c7, #2c3e50); /* Gris claro a gris oscuro */
+}
+
+.rain-bg {
+  background: linear-gradient(to top right, #3a6073, #16222a); /* Azul profundo y oscuro */
+}
+
+.snow-bg {
+  background: linear-gradient(to top right, #ffffff, #b6eaff); /* Blanco a celeste claro */
+}
+
+.mist-bg {
+  background: linear-gradient(to top right, #abbaab, #ffffff); /* Verde niebla con blanco */
+}
+
+.default-bg {
+  background: linear-gradient(to top right, #4e54c8, #8f94fb); /* Azul-violeta moderno */
+}
+
+
 
 .container{
     position: relative;
@@ -205,4 +233,32 @@ body{
         scale: 1;
         opacity: 1;
     }
+}
+
+.clear-bg {
+    background: linear-gradient(to top right, #fefcea, #f1da36);
+}
+
+.clouds-bg {
+    background: linear-gradient(to top right, #d7d2cc, #304352);
+}
+
+.rain-bg {
+    background: linear-gradient(to top right, #4b79a1, #283e51);
+}
+
+.snow-bg {
+    background: linear-gradient(to top right, #e6f0f3, #ffffff);
+}
+
+.mist-bg {
+    background: linear-gradient(to top right, #cfd9df, #e2ebf0);
+}
+
+.default-bg {
+    background: linear-gradient(to top right, #d3cce3, #e9e4f0);
+}
+
+body {
+    transition: background 1s ease-in-out;
 }
